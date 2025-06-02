@@ -9,8 +9,6 @@ services:
     image: marker-api-gpu-image
     volumes:
       - .:/app
-    depends_on:
-      - redis
     environment:
       - REDIS_HOST=${REDIS_HOST}
     deploy:
@@ -30,7 +28,6 @@ services:
     volumes:
       - .:/app
     depends_on:
-      - redis
       - celery_worker
     deploy:
       resources:
