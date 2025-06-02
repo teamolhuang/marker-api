@@ -50,7 +50,6 @@ services:
       - REDIS_HOST=${REDIS_HOST}
     depends_on:
       - app
-      - redis
       - celery_worker
     deploy:
       resources:
